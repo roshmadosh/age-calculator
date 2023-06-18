@@ -1,0 +1,14 @@
+$color-purple: hsl(259, 100%, 65%);
+$color-red: hsl(0, 100%, 67%);
+$color-white: hsl(0 , 0%, 100%); 
+$color-offwhite: hsl(0, 0%, 94%);
+$color-lightgrey: hsl(0, 0%, 86%);
+$color-smokey: hsl(0, 1%, 44%);
+$color-offblack: hsl(0, 0%, 8%);
+
+$ff-main: 'Poppins', sans-serif;
+
+
+body {
+    font-family: $ff-main;
+}
