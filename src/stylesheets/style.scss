@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $color-purple: hsl(259, 100%, 65%);
 $color-red: hsl(0, 100%, 67%);
 $color-white: hsl(0 , 0%, 100%); 
@@ -6,9 +8,108 @@ $color-lightgrey: hsl(0, 0%, 86%);
 $color-smokey: hsl(0, 1%, 44%);
 $color-offblack: hsl(0, 0%, 8%);
 
+$fs-input: 2.4rem;
+
 $ff-main: 'Poppins', sans-serif;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
 
 body {
+    background-color: $color-offwhite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: inline-block;
+    background-color: $color-white;
+    border-radius: 2.4rem;
+    border-bottom-right-radius: 16.8rem !important;
+    padding: 1.6rem 4.8rem;
+    > * {
+        padding: 3.2rem 0;
+    }
+}
+
+form {
+    display: flex;
+    border-bottom: 1px solid $color-lightgrey;
+    button {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top: 5.6em;
+        background-color: $color-purple;
+        cursor: pointer;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-right: $fs-input; 
+    label {
+        letter-spacing: 0.5ch;    
+        font-family: $ff-main;
+        font-weight: bold;
+        color: $color-smokey;
+        margin-bottom: 1ch;
+    }
+    input {
+        border: 1px solid $color-lightgrey;
+        border-radius: .25ch;
+        font-size: $fs-input; 
+        font-family: $ff-main;
+        font-weight: bold;
+        width: 7ch;
+        padding: 0.5ch;
+    }
+}
+
+.input:last-of-type {
+    margin-right: 10ch;
+}
+
+.display {
     font-family: $ff-main;
+    font-size: 8.0rem;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -2px;
+    line-height: 8.6rem;
+    span {
+        color: $color-purple;
+    }
+}
+
+.digits {
+    display: flex;
+    :nth-child(2) {
+        margin-right: .25ch;
+    }
+    
+}
+.digit {
+    transition: all 2s ease-out;
+}
+
+.move-3 {
+    transform: translateY(calc(-8.6rem * 3));
+}
+.digit-container {
+    display: flex;
+    width: 1ch;
+    height: 8.6rem;
+    overflow: hidden;
 }
