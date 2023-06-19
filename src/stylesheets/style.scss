@@ -31,11 +31,11 @@ $ff-main: 'Poppins', sans-serif;
     form {
         display: block !important;
         position: relative;
-        padding-bottom: 6.4rem !important;
+        padding-bottom: 4.8rem !important;
         button {
-            transform: scale(.75);
+            transform: scale(.8);
             position: absolute !important;
-            top: 13rem !important;
+            top: 11.5rem !important;
             left: 0 !important;
             right: 0 !important;
             margin: auto;
@@ -51,7 +51,7 @@ $ff-main: 'Poppins', sans-serif;
 
 html {
     font-size: 62.5%;
-    max-width: 1440px;
+    display: flex;
 }
 
 body {
@@ -60,6 +60,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1440px;
+    margin: auto;
 }
 
 main {
