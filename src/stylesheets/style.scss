@@ -9,7 +9,7 @@ $color-smokey: hsl(0, 1%, 44%);
 $color-offblack: hsl(0, 0%, 8%);
 
 $fs-input: 2.4rem;
-
+$fs-digit: 8.0rem;
 $ff-main: 'Poppins', sans-serif;
 
 * {
@@ -51,6 +51,7 @@ form {
         position: relative;
         top: 5.6em;
         background-color: $color-purple;
+        border: 1px solid transparent;
         cursor: pointer;
     }
 }
@@ -83,11 +84,11 @@ form {
 
 .display {
     font-family: $ff-main;
-    font-size: 8.0rem;
+    font-size: $fs-digit; 
     font-weight: bold;
     font-style: italic;
     letter-spacing: -2px;
-    line-height: 8.6rem;
+    line-height: calc($fs-digit + 0.6rem); 
     span {
         color: $color-purple;
     }
@@ -100,16 +101,98 @@ form {
     }
     
 }
-.digit {
+.digit-1 {
+    transition: all 1.2s ease-out;
+}
+.digit-2 {
+    transition: all .55s ease-out;
+}
+.digit-3 {
     transition: all 2s ease-out;
 }
+.digit-4 {
+    transition: all 1.75s ease-out;
+}
+.digit-5 {
 
+    transition: all 1.68s ease-out;
+}
+.digit-6 {
+    transition: all 2.4s ease-out;
+}
+
+.move-1 {
+    transform: translateY(calc(-1.08 * $fs-digit));
+}
+.move-2 {
+    transform: translateY(calc(-2.15 * $fs-digit));
+}
 .move-3 {
-    transform: translateY(calc(-8.6rem * 3));
+    transform: translateY(calc(-3.22 * $fs-digit));
+}
+.move-4 {
+    transform: translateY(calc(-4.29 * $fs-digit));
+}
+.move-5 {
+    transform: translateY(calc(-5.37 * $fs-digit));
+}
+.move-6 {
+    transform: translateY(calc(-6.45 * $fs-digit));
+}
+.move-7 {
+    transform: translateY(calc(-7.53 * $fs-digit));
+}
+.move-8 {
+    transform: translateY(calc(-8.6 * $fs-digit));
+}
+.move-9 {
+    transform: translateY(calc(-9.68 * $fs-digit));
 }
 .digit-container {
     display: flex;
     width: 1ch;
     height: 8.6rem;
     overflow: hidden;
+}
+.input.invalid {
+    position: relative;
+    label {
+        color: $color-red;
+    }
+    input {
+        border-color: $color-red;
+    }
+}
+
+.input.invalid:first-of-type::after {
+    width: 210px;
+    position: absolute;
+    left: 0;
+    bottom: -2ch;
+    letter-spacing: 0;
+    color: $color-red;
+    font-family: $ff-main;
+    content: 'Must be a valid month.';
+}
+
+.input.invalid:nth-of-type(2)::after {
+    width: 210px;
+    position: absolute;
+    left: 0;
+    bottom: -2ch;
+    letter-spacing: 0;
+    color: $color-red;
+    font-family: $ff-main;
+    content: 'Must be a valid day.';
+}
+
+.input.invalid:last-of-type::after {
+    width: 210px;
+    position: absolute;
+    left: 0;
+    bottom: -2ch;
+    letter-spacing: 0;
+    color: $color-red;
+    font-family: $ff-main;
+    content: 'Must be a valid year.';
 }

@@ -38,6 +38,7 @@ form button {
   position: relative;
   top: 5.6em;
   background-color: hsl(259, 100%, 65%);
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
@@ -86,12 +87,64 @@ form button {
   margin-right: 0.25ch;
 }
 
-.digit {
+.digit-1 {
+  transition: all 1.2s ease-out;
+}
+
+.digit-2 {
+  transition: all 0.55s ease-out;
+}
+
+.digit-3 {
   transition: all 2s ease-out;
 }
 
+.digit-4 {
+  transition: all 1.75s ease-out;
+}
+
+.digit-5 {
+  transition: all 1.68s ease-out;
+}
+
+.digit-6 {
+  transition: all 2.4s ease-out;
+}
+
+.move-1 {
+  transform: translateY(-8.64rem);
+}
+
+.move-2 {
+  transform: translateY(-17.2rem);
+}
+
 .move-3 {
-  transform: translateY(-25.8rem);
+  transform: translateY(-25.76rem);
+}
+
+.move-4 {
+  transform: translateY(-34.32rem);
+}
+
+.move-5 {
+  transform: translateY(-42.96rem);
+}
+
+.move-6 {
+  transform: translateY(-51.6rem);
+}
+
+.move-7 {
+  transform: translateY(-60.24rem);
+}
+
+.move-8 {
+  transform: translateY(-68.8rem);
+}
+
+.move-9 {
+  transform: translateY(-77.44rem);
 }
 
 .digit-container {
@@ -99,6 +152,49 @@ form button {
   width: 1ch;
   height: 8.6rem;
   overflow: hidden;
+}
+
+.input.invalid {
+  position: relative;
+}
+.input.invalid label {
+  color: hsl(0, 100%, 67%);
+}
+.input.invalid input {
+  border-color: hsl(0, 100%, 67%);
+}
+
+.input.invalid:first-of-type::after {
+  width: 210px;
+  position: absolute;
+  left: 0;
+  bottom: -2ch;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 67%);
+  font-family: "Poppins", sans-serif;
+  content: "Must be a valid month.";
+}
+
+.input.invalid:nth-of-type(2)::after {
+  width: 210px;
+  position: absolute;
+  left: 0;
+  bottom: -2ch;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 67%);
+  font-family: "Poppins", sans-serif;
+  content: "Must be a valid day.";
+}
+
+.input.invalid:last-of-type::after {
+  width: 210px;
+  position: absolute;
+  left: 0;
+  bottom: -2ch;
+  letter-spacing: 0;
+  color: hsl(0, 100%, 67%);
+  font-family: "Poppins", sans-serif;
+  content: "Must be a valid year.";
 }
 
 /*# sourceMappingURL=style.css.map */
