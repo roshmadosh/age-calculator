@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://roshmadosh.github.io/age-calculator/)
 
 ## My process
 To make the digits scroll, I hard-coded 1 through 9 for both the tens and ones digit of each result, and used `overflow: hidden` with `transform: translateY()`. Javascript added a CSS class depending on the digit being rendered, which scrolled the digit a specific amount.
