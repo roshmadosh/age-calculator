@@ -55,8 +55,6 @@ To make the digits scroll, I hard-coded 1 through 9 for both the tens and ones d
 ### What I learned
 My naive solution to the digits scrolling was new.
 
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
 - Frontend Mentor - [@roshmadosh](https://www.frontendmentor.io/profile/roshmadosh)
